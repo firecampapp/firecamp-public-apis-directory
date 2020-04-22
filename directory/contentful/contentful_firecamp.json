@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "__export_time": 1587548863316,
+    "__export_app": "firecamp_v1.2.2",
+    "__export_version": 1
+  },
+  "project": {
+    "name": "Contentful"
+  },
+  "environment_snippets": [
+    {
+      "name": "Production",
+      "is_global": false
+    },
+    {
+      "name": "Staging",
+      "is_global": false
+    },
+    {
+      "name": "Development",
+      "is_global": false,
+      "is_reserved": true
+    }
+  ],
+  "requests": [
+    {
+      "name": "Contentful public query list",
+      "url": {
+        "host": "graphql.contentful.com",
+        "hostname": "graphql.contentful.com",
+        "href": "https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p",
+        "origin": "https://graphql.contentful.com",
+        "pathname": "/content/v1/spaces/f8bqpb154z8p",
+        "protocol": "https:"
+      },
+      "method": "POST",
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/json",
+          "disable": false
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
+          "disable": false
+        },
+        {
+          "key": "Authorization",
+          "value": "Bearer 9d5de88248563ebc0d2ad688d0473f56fcd31c600e419d6c8962f6aed0150599",
+          "disable": false
+        }
+      ],
+      "auth": {
+        "oauth1": {
+          "signature_method": "HMAC-SHA1"
+        },
+        "oauth2": {
+          "active_grant_type": "code",
+          "grant_types": {
+            "code": {
+              "grant_type": "code"
+            },
+            "implicit": {
+              "grant_type": "implicit"
+            },
+            "password": {
+              "grant_type": "password"
+            },
+            "client_credentials": {
+              "grant_type": "client_credentials"
+            }
+          }
+        },
+        "hawk": {
+          "algorithm": "SHA256"
+        }
+      },
+      "active_auth": "no_auth",
+      "type": "graphql",
+      "current_query": "undefined_undefined",
+      "queries": [
+        {
+          "name": "lessonImageCollection",
+          "q_type": "Q",
+          "query": "query lessonImageCollection {\n  __typename\n  lessonImageCollection {\n    items {\n      sys {\n        id\n        firstPublishedAt\n        environmentId\n        publishedAt\n        publishedVersion\n        spaceId\n      }\n      title\n      image {\n        sys {\n          id\n        }\n        title\n      }\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "layoutHighlightedCourse",
+          "q_type": "Q",
+          "query": "query layoutHighlightedCourse {\n  __typename\n  layoutHighlightedCourse(id: \"4B9n4zqG6QCgui8YiUs4Yc\") {\n    course {\n      title\n      sys {\n        id\n        publishedAt\n        publishedVersion\n        spaceId\n        firstPublishedAt\n        environmentId\n      }\n      slug\n    }\n    sys {\n      id\n      firstPublishedAt\n      environmentId\n      publishedAt\n      publishedVersion\n      spaceId\n    }\n    title\n  }\n}"
+        },
+        {
+          "name": "category",
+          "q_type": "Q",
+          "query": "query category {\n  __typename\n  category(id: \"6ucY5w3oswEU6EYSCEi0C8\") {\n    slug\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n      environmentId\n    }\n    title\n  }\n}"
+        },
+        {
+          "name": "layoutCopyCollection",
+          "q_type": "Q",
+          "query": "query layoutCopyCollection {\n  __typename\n  layoutCopyCollection {\n    items {\n      title\n      visualStyle\n      headline\n      linkedFrom {\n        entryCollection {\n          limit\n          skip\n          total\n        }\n      }\n      sys {\n        id\n        environmentId\n        firstPublishedAt\n        publishedAt\n        publishedVersion\n        spaceId\n      }\n    }\n    total\n    limit\n    skip\n  }\n}\n"
+        },
+        {
+          "name": "lessonCopy",
+          "q_type": "Q",
+          "query": "query lessonCopy {\n  __typename\n  lessonCopy(id: \"5jR4ciJ8Y8m2KKqmMKOkg4\") {\n    copy\n    sys {\n      id\n      environmentId\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n    }\n    title\n  }\n}"
+        },
+        {
+          "name": "lessionImageCollection",
+          "query": "query lessionImageCollection {\n  lessonImageCollection {\n    total\n    items {\n      title\n      image(preview: false) {\n        title\n        url\n        description\n        height\n        fileName\n        linkedFrom {\n          courseCollection {\n            total\n          }\n        }\n        size\n      }\n      caption\n    }\n  }\n}\n",
+          "variables": [],
+          "q_type": "Q"
+        },
+        {
+          "name": "asset",
+          "q_type": "Q",
+          "query": "query asset {\n  __typename\n  asset(id: \"1PzXR2apawY8iYM4o0AUoi\") {\n    fileName\n    size\n    title\n    height\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n      environmentId\n    }\n    width\n    description\n    contentType\n  }\n}"
+        },
+        {
+          "name": "assetCollection",
+          "q_type": "Q",
+          "query": "query assetCollection {\n  __typename\n  assetCollection {\n    limit\n    skip\n    total\n    items {\n      contentType\n      description\n      fileName\n      height\n    }\n  }\n}"
+        },
+        {
+          "name": "layout",
+          "q_type": "Q",
+          "query": "query layout {\n  __typename\n  layout(id: \"2uNOpLMJioKeoMq8W44uYc\") {\n    slug\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      firstPublishedAt\n      environmentId\n      spaceId\n    }\n    title\n    contentModulesCollection {\n      skip\n      total\n    }\n  }\n}"
+        },
+        {
+          "name": "layoutHeroImageCollection",
+          "q_type": "Q",
+          "query": "query layoutHeroImageCollection {\n  __typename\n  layoutHeroImageCollection {\n    items {\n      sys {\n        id\n        environmentId\n        spaceId\n        publishedAt\n        publishedVersion\n        firstPublishedAt\n      }\n      title\n      headline\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "categoryCollection",
+          "q_type": "Q",
+          "query": "query categoryCollection {\n  __typename\n  categoryCollection {\n    items {\n      title\n      slug\n      linkedFrom {\n        entryCollection {\n          items {\n            sys {\n              id\n              firstPublishedAt\n              environmentId\n              publishedAt\n            }\n          }\n          limit\n        }\n      }\n    }\n  }\n}"
+        },
+        {
+          "name": "lessonCopyCollection",
+          "q_type": "Q",
+          "query": "query lessonCopyCollection {\n  __typename\n  lessonCopyCollection {\n    items {\n      sys {\n        id\n        publishedAt\n        publishedVersion\n        spaceId\n        firstPublishedAt\n        environmentId\n      }\n      copy\n      title\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "layoutCollection",
+          "q_type": "Q",
+          "query": "query layoutCollection {\n  __typename\n  layoutCollection {\n    items {\n      sys {\n        id\n        publishedAt\n        firstPublishedAt\n        publishedVersion\n        spaceId\n      }\n      title\n      contentModulesCollection(limit: 10) {\n        limit\n        total\n        skip\n      }\n    }\n    limit\n    total\n    skip\n  }\n}"
+        },
+        {
+          "name": "lesson",
+          "q_type": "Q",
+          "query": "query lesson {\n  __typename\n  lesson(id: \"5p9qNpTOJaCE6ykC4a8Wqg\") {\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n      environmentId\n    }\n    title\n    slug\n    publishDate\n    modulesCollection {\n      limit\n      skip\n      total\n    }\n    enabled\n  }\n}"
+        },
+        {
+          "name": "totalLayoutCollection",
+          "q_type": "Q",
+          "query": "query totalLayoutCollection {\n  __typename\n  layoutCollection {\n    total\n  }\n}"
+        },
+        {
+          "name": "lessonCollection",
+          "q_type": "Q",
+          "query": "query lessonCollection {\n  __typename\n  lessonCollection {\n    items {\n      sys {\n        id\n        publishedAt\n        publishedVersion\n        spaceId\n        firstPublishedAt\n        environmentId\n      }\n      title\n      slug\n      publishDate\n      enabled\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "layoutHeroImage",
+          "q_type": "Q",
+          "query": "query layoutHeroImage {\n  __typename\n  layoutHeroImage(id: \"77NL8rGPks6SauGuoG8ui\") {\n    title\n    sys {\n      id\n      firstPublishedAt\n      environmentId\n      publishedAt\n      publishedVersion\n      spaceId\n    }\n    headline\n  }\n}"
+        },
+        {
+          "name": "lessonCodeSnippets",
+          "q_type": "Q",
+          "query": "query lessonCodeSnippets {\n  __typename\n  lessonCodeSnippets(id: \"1ph3B44420k2wgG8y2aYcM\") {\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n      environmentId\n    }\n    title\n    swift\n    ruby\n    python\n    php\n    javascript\n    javaAndroid\n    java\n    dotNet\n    curl\n  }\n}"
+        },
+        {
+          "name": "lessonCodeSnippetsCollection",
+          "q_type": "Q",
+          "query": "query lessonCodeSnippetsCollection {\n  __typename\n  lessonCodeSnippetsCollection {\n    items {\n      title\n      sys {\n        id\n        spaceId\n        environmentId\n        firstPublishedAt\n        publishedAt\n        publishedVersion\n      }\n      swift\n      ruby\n      python\n      php\n      javascript\n      javaAndroid\n      java\n      dotNet\n      curl\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "layoutHighlightedCourseCollection",
+          "q_type": "Q",
+          "query": "query layoutHighlightedCourseCollection {\n  __typename\n  layoutHighlightedCourseCollection {\n    items {\n      sys {\n        id\n        publishedAt\n        publishedVersion\n        spaceId\n        firstPublishedAt\n        environmentId\n      }\n      title\n    }\n    limit\n    skip\n    total\n  }\n}"
+        },
+        {
+          "name": "lessonImage",
+          "q_type": "Q",
+          "query": "query lessonImage {\n  __typename\n  lessonImage(id: \"6gFiJvssqQ62CMYqECOu2M\") {\n    title\n    image {\n      title\n      sys {\n        id\n        publishedAt\n        publishedVersion\n        spaceId\n        firstPublishedAt\n        environmentId\n      }\n      width\n    }\n    sys {\n      id\n      publishedAt\n      publishedVersion\n      spaceId\n      firstPublishedAt\n      environmentId\n    }\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "contentful",
+      "data": "\n### Contentful public APIs\n---\n\nGraphQL Content API supports the Content Delivery API (CDA) and the Content Preview API (CPA) offering a fully functional equivalent to the REST implementation of the two APIs. It provides each space with a GraphQL schema based on its content types. GraphQL endpoint filtering capabilities, schema generation process, and error codes are explained in the [Reference guide](https://www.contentful.com/developers/docs/references/graphql/).\n\nCheck out the [API-ENDPONIT](https://graphql.contentful.com/content/v1/spaces/f8bqpb154z8p)\n\n>### **Preview of Contentful query collection in Firecamp**\n\n![Contentful queries list and debugging](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/master/directory/contentful/contentful%20query%20collection%20Firecamp.gif)\n\n***\n\n### **List of queries**\n---\n**1. asset**\n\nasset is contained like file name, file size-width-height, description, publish info, etc.\n\n**2. assetCollection**\n\ncollection of total available assets and contain asset info.\n\n**3. category**\n\nProvide available category of content and environment info, publish info, spaces info, versioning, etc.\n\n**4. categoryCollection**\n\nCollection of category includes available all categories and its basic info.\n\n**5. layout**\n\nprovide information about layout like publish info, spaces, environment, contentCollection info, etc\n\n**6. layoutCollection**\n\ncollection of the different available layout with its basic information.\n\n**7. layoutCopyCollection**\n\ncollection of different available layoutCopy with it basic information.\n\n**8. layoutHeroImage**\n\nProvide basic information about layout like title, headline, publish info, environment, spaces, etc.\n\n**9. layoutHeroImageCollection**\n\ncollection of different available layoutHeroImage with it basic information.\n\n**10. layoutHighlightedCourse**\n\nProvide highlighted courses with its basic info like title, environment, publish information, slug, spaceid, etc.\n\n**11. layoutHighlightedCourseCollection**\n\ncollection of highlighted courses that contain information like title, environmentID, publish information, slug, spaceid, etc.\n\n**12. lessonImage**\n\nprovide lessonImage publish info, width, sys info, environment, spaces, etc.\n\n**13. lessonImageCollection**\n\ncollection of lessonImage and contain image publish info, version, images id, a total of lesson images, etc.",
+      "type": "md",
+      "description": "GraphQL Content API"
+    }
+  ]
+}
