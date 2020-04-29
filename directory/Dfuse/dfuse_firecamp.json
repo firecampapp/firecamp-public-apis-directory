@@ -1,0 +1,1461 @@
+{
+  "meta": {
+    "__export_time": 1588176947474,
+    "__export_app": "firecamp_v1.2.3",
+    "__export_version": 1
+  },
+  "project": {
+    "name": "dfuse"
+  },
+  "environment_snippets": [
+    {
+      "name": "Staging",
+      "is_reserved": false,
+      "workspace_uuid": "WRS-c62f2aa0-935a-4d17-ab9d-8ab504c493d8"
+    },
+    {
+      "name": "Production",
+      "is_reserved": false,
+      "workspace_uuid": "WRS-c62f2aa0-935a-4d17-ab9d-8ab504c493d8"
+    },
+    {
+      "name": "Development",
+      "is_reserved": true,
+      "variables": [
+        {
+          "name": "value",
+          "key": "Authorization",
+          "value": "bearer eyJhbGciOiJLTVNFUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODgyNDE1NzgsImp0aSI6ImQyMzNhMjVlLWMyMjAtNDI2ZS05ODhjLWVmZDgwNGZkZjNhYiIsImlhdCI6MTU4ODE1NTE3OCwiaXNzIjoiZGZ1c2UuaW8iLCJzdWIiOiJ1aWQ6MGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwidGllciI6ImZyZWUtdjEiLCJ2IjoxLCJ1c2ciOiJ3ZWIiLCJha2kiOiJjYmY0NzIzMWE3MTc2NjBhZWM2Y2VlOTA4YjMxODRkZjhkODQ5Y2YwN2RjMmUyNTJlOTUyOGEzOTA3YmYzNmU0Iiwib3JpZ2luIjoiMGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwic3RibGsiOi0zNjAwLCJwbGFuIjowfQ.jiJiTd36Z_ucrqWcHJg3VeukQ2r_v-GZbMIJC8PHNl6CrfueUuEDX2YSB57yQEMxVQZnZU3Xj9TDSovOOaXSiA",
+          "disable": false,
+          "type": "text"
+        },
+        {
+          "key": "token",
+          "value": "eyJhbGciOiJLTVNFUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODgyNDE1NzgsImp0aSI6ImQyMzNhMjVlLWMyMjAtNDI2ZS05ODhjLWVmZDgwNGZkZjNhYiIsImlhdCI6MTU4ODE1NTE3OCwiaXNzIjoiZGZ1c2UuaW8iLCJzdWIiOiJ1aWQ6MGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwidGllciI6ImZyZWUtdjEiLCJ2IjoxLCJ1c2ciOiJ3ZWIiLCJha2kiOiJjYmY0NzIzMWE3MTc2NjBhZWM2Y2VlOTA4YjMxODRkZjhkODQ5Y2YwN2RjMmUyNTJlOTUyOGEzOTA3YmYzNmU0Iiwib3JpZ2luIjoiMGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwic3RibGsiOi0zNjAwLCJwbGFuIjowfQ.jiJiTd36Z_ucrqWcHJg3VeukQ2r_v-GZbMIJC8PHNl6CrfueUuEDX2YSB57yQEMxVQZnZU3Xj9TDSovOOaXSiA",
+          "disable": false,
+          "type": "text"
+        }
+      ],
+      "workspace_uuid": "WRS-c62f2aa0-935a-4d17-ab9d-8ab504c493d8"
+    }
+  ],
+  "modules": [
+    {
+      "name": "Graphql",
+      "requests": [
+        {
+          "name": "GraphQL Queries List",
+          "url": {
+            "host": "mainnet.eth.dfuse.io",
+            "hostname": "mainnet.eth.dfuse.io",
+            "href": "https://mainnet.eth.dfuse.io/graphql",
+            "origin": "https://mainnet.eth.dfuse.io",
+            "pathname": "/graphql",
+            "protocol": "https:",
+            "slashes": true
+          },
+          "method": "POST",
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "disable": false
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "disable": false
+            },
+            {
+              "key": "Authorization",
+              "value": "{{Authorization}}",
+              "disable": false
+            }
+          ],
+          "auth": {
+            "oauth1": {
+              "signature_method": "HMAC-SHA1"
+            },
+            "oauth2": {
+              "active_grant_type": "code",
+              "grant_types": {
+                "code": {
+                  "grant_type": "code"
+                },
+                "implicit": {
+                  "grant_type": "implicit"
+                },
+                "password": {
+                  "grant_type": "password"
+                },
+                "client_credentials": {
+                  "grant_type": "client_credentials"
+                }
+              }
+            },
+            "hawk": {
+              "algorithm": "SHA256"
+            }
+          },
+          "active_auth": "no_auth",
+          "playground": {
+            "Q_BlockByNUmberHeader": {
+              "name": "BlockByNUmberHeader",
+              "query": "query BlockByNUmberHeader {\n  __typename\n  blockByNumber(number: \"5\") {\n    hash\n    number\n    size\n    header {\n      coinbase\n      difficulty\n      gasLimit\n      gasUsed\n      number\n      transactionsRoot\n      timestamp\n      stateRoot\n      receiptRoot\n      extraData\n      nonce\n      parentHash\n    }\n  }\n}",
+              "q_type": "Q"
+            }
+          },
+          "current_query": "Q_BlockByNUmberHeader",
+          "type": "graphql",
+          "queries": [
+            {
+              "name": "TransactionEdgeHeader",
+              "query": "query TransactionEdgeHeader {\n  __typename\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\") {\n    edges {\n      undo\n      block {\n        hash\n        number\n        header {\n          coinbase\n          transactionsRoot\n          gasLimit\n          gasUsed\n          extraData\n          difficulty\n          parentHash\n          timestamp\n          stateRoot\n        }\n      }\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "TransactionEdge",
+              "query": "query TransactionEdge {\n  __typename\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\") {\n    edges {\n      block {\n        hash\n        number\n      }\n      undo\n    }\n    pageInfo {\n      endCursor\n      startCursor\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "TransactionOutcome",
+              "query": "query TransactionOutcome {\n  __typename\n  transaction(hash: \"0x3be3b44ae48a074d3b79e3054bb3b62b5c5e5a8fc2210cd1dc7c7932ae5addcd\") {\n    from\n    to\n    outcome\n    status\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "Transaction",
+              "query": "query Transaction {\n  transaction(hash: \"0x1798aefe0fe6f15abcaed3901474c1bd4303ba0fafe32d232e5121e29d63841e\") {\n    block {\n      hash\n      number\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "Pagination",
+              "query": "query Pagination {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    edges {\n      cursor\n      node {\n        __typename\n        hash\n        from\n        to\n      }\n    }\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "CursorsSignature",
+              "query": "query CursorsSignature {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    edges {\n      cursor\n      node {\n        __typename\n        from\n        to\n        signature {\n          r\n          s\n          v\n        }\n        status\n      }\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "Signatures",
+              "query": "query Signatures {\n  __typename\n  transaction(hash: \"0x3be3b44ae48a074d3b79e3054bb3b62b5c5e5a8fc2210cd1dc7c7932ae5addcd\") {\n    from\n    to\n    signature {\n      r\n      s\n      v\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "CursorsGasDetail",
+              "query": "query CursorsGasDetail {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    edges {\n      cursor\n      node {\n        __typename\n        from\n        to\n        status\n        gasLimit\n        gasPrice(encoding: WEI)\n        gasUsed\n        cumulativeGasUsed\n      }\n    }\n    pageInfo\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "BlockByNUmber",
+              "query": "query BlockByNUmber {\n  __typename\n  blockByNumber(number: \"5\") {\n    hash\n    number\n    size\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "ToandfromTransaction",
+              "query": "query ToandfromTransaction {\n  __typename\n  transaction(hash: \"0x3be3b44ae48a074d3b79e3054bb3b62b5c5e5a8fc2210cd1dc7c7932ae5addcd\") {\n    status\n    from\n    to\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "cursors",
+              "query": "query cursors {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    edges {\n      cursor\n      node {\n        __typename\n        hash\n        from\n        to\n      }\n    }\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "GasDetails",
+              "query": "query GasDetails {\n  __typename\n  transaction(hash: \"0x3be3b44ae48a074d3b79e3054bb3b62b5c5e5a8fc2210cd1dc7c7932ae5addcd\") {\n    status\n    from\n    to\n    gasLimit\n    gasPrice(encoding: WEI)\n    gasUsed\n    cumulativeGasUsed\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "CursorsPageInfo",
+              "query": "query CursorsPageInfo {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    edges {\n      cursor\n    }\n    pageInfo {\n      endCursor\n      startCursor\n    }\n  }\n}",
+              "q_type": "Q"
+            },
+            {
+              "name": "BlockByNUmberHeader",
+              "query": "query BlockByNUmberHeader {\n  __typename\n  blockByNumber(number: \"5\") {\n    hash\n    number\n    size\n    header {\n      coinbase\n      difficulty\n      gasLimit\n      gasUsed\n      number\n      transactionsRoot\n      timestamp\n      stateRoot\n      receiptRoot\n      extraData\n      nonce\n      parentHash\n    }\n  }\n}\n",
+              "q_type": "Q"
+            },
+            {
+              "name": "Recent_Transaction",
+              "query": "query Recent_Transaction {\n  searchTransactions(indexName: CALLS, query: \"to:0x06012c8cf97BEaD5deAe237070F9587f8E7A266d\", sort: DESC, limit: 3) {\n    pageInfo {\n      endCursor\n    }\n    edges {\n      node {\n        hash\n      }\n    }\n  }\n}",
+              "q_type": "Q"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HTTP",
+      "modules": [
+        {
+          "name": "Transaction",
+          "requests": [
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/transactions/1d5f57e9392d045ef4d1d19e6976803f06741e11089855b94efcdb42a1a41253",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/transactions/1d5f57e9392d045ef4d1d19e6976803f06741e11089855b94efcdb42a1a41253",
+                "protocol": "https:",
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "transaction_id",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/search/transactions?start_block=0&block_count=10000&limit=10&sort=desc&q=receiver%3Aeosio.token%20action%3Atransfer%20data.to%3Asomeaccount1",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/search/transactions",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "start_block",
+                    "value": "0",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_count",
+                    "value": "10000",
+                    "disable": false
+                  },
+                  {
+                    "key": "limit",
+                    "value": "10",
+                    "disable": false
+                  },
+                  {
+                    "key": "sort",
+                    "value": "desc",
+                    "disable": false
+                  },
+                  {
+                    "key": "q",
+                    "value": "receiver:eosio.token action:transfer data.to:someaccount1",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "auth": {
+                "bearer": {
+                  "token": "eyJhbGciOiJLTVNFUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODc5ODMwMzIsImp0aSI6IjdmMDJiNzY2LTIyNTItNGQ4YS05YmM0LTE5M2RiODMyNzg4YyIsImlhdCI6MTU4Nzg5NjYzMiwiaXNzIjoiZGZ1c2UuaW8iLCJzdWIiOiJ1aWQ6MGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwidGllciI6ImZyZWUtdjEiLCJ2IjoxLCJ1c2ciOiJ3ZWIiLCJha2kiOiIzZTM3Y2NjMTZhMzhiYmU3NGNkN2UwNTg4YjZhMjIyMDcwOTdkNGI2ZGUxOTUzOWQzODFmMzkwYmRhN2Q5NzZhIiwib3JpZ2luIjoiMGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwic3RibGsiOi0zNjAwLCJwbGFuIjowfQ.v4hxeawbNDiKAR8U48TM3WJQ6c2s1hpJM68sxQK4bkU6Q_XIJeavkfdtVlTqHUlK8opdLwDQsTdLLFQp9CSd5A"
+                }
+              },
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "Search_transaction",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/push_transactions API",
+              "description": "This method expects a transaction in JSON format and will attempt to apply it to the blockchain.",
+              "url": {
+                "path": "/push_transactions",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"expiration\": \"\",\n    \"ref_block_num\": \"\",\n    \"ref_block_prefix\": \"\",\n    \"max_net_usage_words\": \"\",\n    \"max_cpu_usage_ms\": \"\",\n    \"delay_sec\": \"\",\n    \"context_free_actions\": [\n        {\n            \"data\": {}\n        }\n    ],\n    \"actions\": [\n        {\n            \"account\": \"\"\n        },\n        {\n            \"name\": \"\"\n        },\n        {\n            \"authorization\": [\n                {\n                    \"actor\": \"\"\n                },\n                {\n                    \"permission\": \"\"\n                }\n            ]\n        },\n        {\n            \"data\": {\n                \"data\": {}\n            }\n        },\n        {\n            \"hex_data\": \"\"\n        }\n    ],\n    \"transaction_extensions\": [\n        {\n            \"data\": {}\n        }\n    ]\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/send_transaction API",
+              "description": "This method expects a transaction in JSON format and will attempt to apply it to the blockchain.",
+              "url": {
+                "path": "/send_transaction",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"signatures\": [\n        {\n            \"data\": {}\n        }\n    ],\n    \"compression\": \"\",\n    \"packed_context_free_data\": \"\",\n    \"packed_trx\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/push_transaction API",
+              "description": "This method expects a transaction in JSON format and will attempt to apply it to the blockchain.",
+              "url": {
+                "path": "/push_transaction",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"signatures\": [\n        {\n            \"data\": \"\"\n        }\n    ],\n    \"compression\": \"\",\n    \"packed_context_free_data\": \"\",\n    \"packed_trx\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_scheduled_transaction API",
+              "description": "Retrieves the scheduled transaction",
+              "url": {
+                "path": "/get_scheduled_transaction",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"lower_bound\": \"\",\n    \"limit\": \"\",\n    \"json\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Table",
+          "requests": [
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/table?account=eosio.token&scope=b1&table=accounts&block_num=25000000&json=true",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/table",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eosio.token",
+                    "disable": false
+                  },
+                  {
+                    "key": "scope",
+                    "value": "b1",
+                    "disable": false
+                  },
+                  {
+                    "key": "table",
+                    "value": "accounts",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_num",
+                    "value": "25000000",
+                    "disable": false
+                  },
+                  {
+                    "key": "json",
+                    "value": "true",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "table",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/tables/accounts?accounts=eosio.token%7Ceosadddddddd%7Ctokenbyeocat%7Cethsidechain%7Cepraofficial%7Calibabapoole%7Chirevibeshvt%7Coo1122334455%7Cirespotokens%7Cpublytoken11%7Cparslseed123%7Ctrybenetwork%7Czkstokensr4u&scope=b1&table=accounts&block_num=25000000&json=true",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/tables/accounts",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "accounts",
+                    "value": "eosio.token|eosadddddddd|tokenbyeocat|ethsidechain|epraofficial|alibabapoole|hirevibeshvt|oo1122334455|irespotokens|publytoken11|parslseed123|trybenetwork|zkstokensr4u",
+                    "disable": false
+                  },
+                  {
+                    "key": "scope",
+                    "value": "b1",
+                    "disable": false
+                  },
+                  {
+                    "key": "table",
+                    "value": "accounts",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_num",
+                    "value": "25000000",
+                    "disable": false
+                  },
+                  {
+                    "key": "json",
+                    "value": "true",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "table_accounts",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/table_scopes?account=eosforumdapp&table=proposal",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/table_scopes",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eosforumdapp",
+                    "disable": false
+                  },
+                  {
+                    "key": "table",
+                    "value": "proposal",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "table_scopes",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/table/row?account=eosio.token&scope=b1&table=accounts&primary_key=EOS&key_type=symbol_code&block_num=25000000&json=true",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/table/row",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eosio.token",
+                    "disable": false
+                  },
+                  {
+                    "key": "scope",
+                    "value": "b1",
+                    "disable": false
+                  },
+                  {
+                    "key": "table",
+                    "value": "accounts",
+                    "disable": false
+                  },
+                  {
+                    "key": "primary_key",
+                    "value": "EOS",
+                    "disable": false
+                  },
+                  {
+                    "key": "key_type",
+                    "value": "symbol_code",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_num",
+                    "value": "25000000",
+                    "disable": false
+                  },
+                  {
+                    "key": "json",
+                    "value": "true",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "table_row",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_table_rows API",
+              "description": "Returns an object containing rows from the specified table.",
+              "url": {
+                "path": "/get_table_rows",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"code\": \"\",\n    \"table\": \"\",\n    \"scope\": \"\",\n    \"index_position\": \"\",\n    \"key_type\": \"\",\n    \"encode_type\": \"\",\n    \"upper_bound\": \"\",\n    \"lower_bound\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_table_by_scope API",
+              "description": "Retrieves table scope",
+              "url": {
+                "path": "/get_table_by_scope",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"code\": \"\",\n    \"table\": \"\",\n    \"lower_bound\": \"\",\n    \"upper_bound\": \"\",\n    \"limit\": \"\",\n    \"reverse\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/tables/scopes?account=eosio&scopes=eosio.token%7Ceosadddddddd%7Ctokenbyeocat%7Cethsidechain%7Cepraofficial%7Calibabapoole%7Chirevibeshvt%7Coo1122334455%7Cirespotokens%7Cpublytoken11%7Cparslseed123%7Ctrybenetwork%7Czkstokensr4u&table=delband&block_num=25000000&json=true",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/tables/scopes",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eosio",
+                    "disable": false
+                  },
+                  {
+                    "key": "scopes",
+                    "value": "eosio.token|eosadddddddd|tokenbyeocat|ethsidechain|epraofficial|alibabapoole|hirevibeshvt|oo1122334455|irespotokens|publytoken11|parslseed123|trybenetwork|zkstokensr4u",
+                    "disable": false
+                  },
+                  {
+                    "key": "table",
+                    "value": "delband",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_num",
+                    "value": "25000000",
+                    "disable": false
+                  },
+                  {
+                    "key": "json",
+                    "value": "true",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "table_scope_account",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Account",
+          "requests": [
+            {
+              "name": "/get_account API",
+              "description": "Returns an object containing various details about a specific account on the blockchain.",
+              "url": {
+                "path": "/get_account",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"account_name\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/key_accounts?public_key=EOS7YNS1swh6QWANkzGgFrjiX8E3u8WK5CK9GMAb6EzKVNZMYhCH3",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/key_accounts",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "public_key",
+                    "value": "EOS7YNS1swh6QWANkzGgFrjiX8E3u8WK5CK9GMAb6EzKVNZMYhCH3",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "key_accounts",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_producers API",
+              "description": "Retrieves producers list",
+              "url": {
+                "path": "/get_producers",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"limit\": \"\",\n    \"lower_bound\": \"\",\n    \"json\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Info",
+          "requests": [
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/block_id/by_time?time=2019-03-04T10%3A36%3A14.5Z&comparator=gte",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/block_id/by_time",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "time",
+                    "value": "2019-03-04T10:36:14.5Z",
+                    "disable": false
+                  },
+                  {
+                    "key": "comparator",
+                    "value": "gte",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "auth": {
+                "bearer": {
+                  "token": "eyJhbGciOiJLTVNFUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODc5ODMwMzIsImp0aSI6IjdmMDJiNzY2LTIyNTItNGQ4YS05YmM0LTE5M2RiODMyNzg4YyIsImlhdCI6MTU4Nzg5NjYzMiwiaXNzIjoiZGZ1c2UuaW8iLCJzdWIiOiJ1aWQ6MGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwidGllciI6ImZyZWUtdjEiLCJ2IjoxLCJ1c2ciOiJ3ZWIiLCJha2kiOiIzZTM3Y2NjMTZhMzhiYmU3NGNkN2UwNTg4YjZhMjIyMDcwOTdkNGI2ZGUxOTUzOWQzODFmMzkwYmRhN2Q5NzZhIiwib3JpZ2luIjoiMGtlZmE2Mjg4ZGU1NWY1NjRmOGZhIiwic3RibGsiOi0zNjAwLCJwbGFuIjowfQ.v4hxeawbNDiKAR8U48TM3WJQ6c2s1hpJM68sxQK4bkU6Q_XIJeavkfdtVlTqHUlK8opdLwDQsTdLLFQp9CSd5A"
+                }
+              },
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "By_time",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_info API",
+              "description": "Returns an object containing various details about the blockchain.",
+              "url": {
+                "path": "/get_info",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody"
+                }
+              ]
+            },
+            {
+              "name": "/get_code API",
+              "description": "Returns an object containing rows from the specified table.",
+              "url": {
+                "path": "/get_code",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"account_name\": \"\",\n    \"code_as_wasm\": 1\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_currency_balance API",
+              "description": "Retrieves the current balance",
+              "url": {
+                "path": "/get_currency_balance",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"code\": \"\",\n    \"account\": \"\",\n    \"symbol\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_currency_stats API",
+              "description": "Retrieves currency stats",
+              "url": {
+                "path": "/get_currency_stats",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"code\": \"\",\n    \"symbol\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_required_keys API",
+              "description": "Returns the required keys needed to sign a transaction.",
+              "url": {
+                "path": "/get_required_keys",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"transaction\": \"\",\n    \"available_keys\": [\n        {\n            \"data\": \"\"\n        }\n    ]\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_abi API",
+              "description": "Retrieves the ABI for a contract based on its account name",
+              "url": {
+                "path": "/get_abi",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"account_name\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/abi_json_to_bin API",
+              "description": "Returns an object containing rows from the specified table.",
+              "url": {
+                "path": "/abi_json_to_bin",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"binargs\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_block API",
+              "description": "Returns an object containing various details about a specific block on the blockchain.",
+              "url": {
+                "path": "/get_block",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"block_num_or_id\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_raw_code_and_abi API",
+              "description": "Retrieves raw code and ABI for a contract based on account name",
+              "url": {
+                "path": "/get_raw_code_and_abi",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"account_name\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_block_header_state API",
+              "description": "Retrieves the glock header state",
+              "url": {
+                "path": "/get_block_header_state",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"block_num_or_id\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_raw_abi API",
+              "description": "Returns an object containing rows from the specified table.",
+              "url": {
+                "path": "/get_raw_abi",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"account_name\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/abi_bin_to_json API",
+              "description": "Returns an object containing rows from the specified table.",
+              "url": {
+                "path": "/abi_bin_to_json",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"code\": \"\",\n    \"action\": \"\",\n    \"binargs\": \"\"\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "/get_activated_protocol_features API",
+              "description": "Retreives the activated protocol features for producer node",
+              "url": {
+                "path": "/get_activated_protocol_features",
+                "host": "mainnet.eos.dfuse.io/v1/chain",
+                "protocol": "http"
+              },
+              "method": "post",
+              "active_body": "Default",
+              "type": "api",
+              "active_auth": "no_auth",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "application/json",
+                  "body_types": {
+                    "application/json": {
+                      "value": "{\n    \"params\": {\n        \"lower_bound\": \"\",\n        \"upper_bound\": \"\",\n        \"limit\": \"\",\n        \"search_by_block_num\": \"\",\n        \"reverse\": \"\"\n    }\n}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/permission_links?account=eoscanadacom&block_num=10000000",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/permission_links",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eoscanadacom",
+                    "disable": false
+                  },
+                  {
+                    "key": "block_num",
+                    "value": "10000000",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "permission_links",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "method": "GET",
+              "url": {
+                "host": "mainnet.eos.dfuse.io",
+                "hostname": "mainnet.eos.dfuse.io",
+                "href": "https://mainnet.eos.dfuse.io/v0/state/abi?account=eosio&json=true",
+                "origin": "https://mainnet.eos.dfuse.io",
+                "pathname": "/v0/state/abi",
+                "protocol": "https:",
+                "query_params": [
+                  {
+                    "key": "account",
+                    "value": "eosio",
+                    "disable": false
+                  },
+                  {
+                    "key": "json",
+                    "value": "true",
+                    "disable": false
+                  }
+                ],
+                "slashes": true
+              },
+              "active_body": "Default",
+              "active_auth": "no_auth",
+              "headers": [
+                {
+                  "key": "Authorization",
+                  "value": "{{Authorization}}",
+                  "disable": false
+                }
+              ],
+              "config": {
+                "ignore_response_content_length": false,
+                "disable_ssl_validation": false
+              },
+              "name": "state_abi",
+              "type": "api",
+              "bodies": [
+                {
+                  "is_default": true,
+                  "name": "Default",
+                  "active_type": "noBody",
+                  "body_types": {
+                    "application/graphql": {
+                      "variables": "{}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WebSocket",
+      "requests": [
+        {
+          "name": "Websocket APIs",
+          "url": "wss://mainnet.eos.dfuse.io/v1/stream?token={{token}}",
+          "type": "websocket",
+          "messages": [
+            {
+              "name": "get_action_traces",
+              "bodies": [
+                {
+                  "title": "26/04/2020, 17:38:29",
+                  "body": "{\n  \"type\": \"get_action_traces\",\n  \"listen\": true,\n  \"req_id\": \"your-request-id\",\n  \"irreversible_only\": true,\n  \"data\": {\n    \"accounts\": \"eosio.token\",\n    \"action_name\": \"transfer\",\n    \"with_inline_traces\": true,\n    \"with_dbops\": true,\n    \"with_dtrxops\": true,\n    \"with_ramops\": true\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "get_transaction_lifecycle",
+              "bodies": [
+                {
+                  "title": "26/04/2020, 17:39:32",
+                  "body": "{\n  \"type\": \"get_transaction\",\n  \"fetch\": true,\n  \"listen\": true,\n  \"data\": {\n    \"id\": \"da1abcf7e205cf410c35ba3d474fd8d854a7513d439f7f1188d186493253ed24\"\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "get_head_info",
+              "bodies": [
+                {
+                  "title": "26/04/2020, 17:38:56",
+                  "body": "{\n  \"type\": \"get_head_info\",\n  \"listen\": true,\n  \"req_id\": \"your-request-id\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "unlisten",
+              "bodies": [
+                {
+                  "title": "26/04/2020, 17:39:46",
+                  "body": "{\"type\": \"unlisten\", \"data\": {\"req_id\": \"your-request-id\"}}"
+                }
+              ]
+            },
+            {
+              "name": "get_table_rows",
+              "bodies": [
+                {
+                  "title": "26/04/2020, 17:39:13",
+                  "body": "{\n  \"type\": \"get_table_rows\",\n  \"req_id\": \"your-request-id\",\n  \"fetch\": true,\n  \"listen\": true,\n  \"data\": {\n    \"code\": \"eosio.token\",\n    \"scope\": \"eoscanadacom\",\n    \"table\": \"accounts\",\n    \"json\": true\n  }\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RealTime",
+      "requests": [
+        {
+          "name": "Socket.io",
+          "config": {
+            "forceNew": false,
+            "transports": [
+              {
+                "name": "Polling",
+                "enable": true
+              },
+              {
+                "name": "WebSocket",
+                "enable": true
+              }
+            ]
+          },
+          "type": "socketio"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "name": "ReadMe",
+      "data": "# **Dfuse**\n------------------\n\n#### **Modules-:**\n- `GraphQL`\n- `Rest API`\n- `WebSocket`\n------------------- \n\n#### 1)GraphQL\n###### `Collections`\n-  TransactionEdgeHeader --->   Details of a single transaction response.\n-   TransactionEdge --->   A single transaction response\n-   TransactionOutcome --->   outcome of the transaction\n-   Transaction --->   Details of The transaction done\n-   Pagination ---> standard way of providing cursors, and a way of telling the client when more results are available.\n-   CursorSignature ---> R,V,S signature of the cursor\n-   Signature ---> R,v,s signature of the transaction\n-   CursorGasDetails ---> control struture of the Gas\n-   Blockbynumber ---> Get a single block by its number\n-   Toand FroTransaction ---> Details of Transaction done by one to a person\n-   Cursors --->sequentially process the rows in your result set\n-   GasDetails ---> Details of the Gas such as gas limit,gas used, etc\n-   CursorPageInfo ---> cursor of the first element of the list, use it to search in the opposite direction and cursor of the last element of the list, use it to continue\n-   BlockBynumberHeader ---> Header details of a single block by its number\n-   Recent_Transaction --->   Details of the recent transaction done\n \n------------------\n\n#### 2)Rest API\n\n\n###### `GET Requests`\n- By_time ---> The following  fetches the block ID, time and block number for the timestamp \n- key_accounts ---> Fetches the accounts controlled by the given public key, at any block height.\n- transaction_id --> Fetching the transaction lifecycle associated with the provided parameter :id.\n- table --> Fetches the state of any table, at any block height.\n- table_accounts --->Fetches a table from a group of contract accounts, at any block height.\n- table_scopes --->Fetches a list of scopes, for a given table on a contract account, at any block height.\n- search_transaction-Search an EOSIO blockchain for transactions based on free-form criterias\n- state_abi-Fetches the ABI for a given contract account, at any block height.\n- table_scope_account --->Fetches all rows for a table in a given contract for a group of scopes, at any block height.\n- table_row --->Fetches a single row from the state of any table, at any block height.\n- permission_links-Fetches snapshots of any account’s linked authorizations on the blockchain, at any block height.\n\n\n###### `POST Requests`\n- get_account ---> Returns an object containing various details about a specific account on the blockchain.\n- get_block ---> Returns an object containing various details about a specific block on the blockchain.\n- get_info --->Returns an object containing various details about the blockchain.\n- push_transaction --->This method expects a transaction in JSON format and will attempt to apply it to the blockchain.\n- send_transaction --->This method expects a transaction in JSON format and will attempt to apply it to the blockchain.\n- push_transactions --->This method expects a transaction in JSON format and will attempt to apply it to the blockchain.\n- get_block_header_state --->Retrieves the glock header state\n- get_abi --->Retrieves the ABI for a contract based on its account name\n- get_currency_balance --->Retrieves the current balance\n- get_currency_stats --->Retrieves currency stats\n- get_required_keys --->Returns the required keys needed to sign a transaction.\n- get_producers ---> Retrieves producers list\n- get_raw_code_and_abi --->Retrieves raw code and ABI for a contract based on account name\n- get_scheduled_transaction --->Retrieves the scheduled transaction\n- get_table_by_scope --->Retrieves table scope\n- get_table_rows --->Returns an object containing rows from the specified table.\n- abi_json_to_bin --->Returns an object containing rows from the specified table.\n- abi_bin_to_json --->Returns an object containing rows from the specified table.\n- get_code --->Returns an object containing rows from the specified table.\n- get_raw_abi --->Returns an object containing rows from the specified table\n-get_activated_protocol_features --->Retreives the activated protocol features for producer node\n\n------------------\n#### 3) WebSocket\n- get_action_traces --->Retrieve a stream of executed actions, filtered by receiver and account\n- get_head_info --->Retrieve a stream of informations about the chain as it moves forward\n- get_table_rows --->Retrieve a stream of changes to the tables, the side effects of transactions/actions being executed\n- get_transaction_lifecycle --->Retrieve a “transaction_lifecycle” (when “fetch” is true) and follow its life-cycle (when “listen” is true)\n- unlisten --->Allows to interrupt a stream.\n\n------------------\n\n\n\n\n",
+      "type": "md"
+    }
+  ]
+}
