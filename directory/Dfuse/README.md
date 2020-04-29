@@ -8,7 +8,7 @@
 ------------------- 
 >### **Preview of Dfuse GraphQL query collection in Firecamp**
 
-![Contentful queries list and debugging](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/master/directory/contentful/GraphQL.gif)
+![Dfuse queries list and debugging](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/GraphQL.gif)
 
 
 #### 1)GraphQL
@@ -33,7 +33,7 @@
 
 >### **Preview of Dfuse HTTP in Firecamp**
 
-![Contentful queries list and debugging](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/master/directory/contentful/HTTP.gif)
+![Dfuse Rest HTTP requests](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/HTTP.gif)
 
 
 #### 2)Rest API
@@ -80,7 +80,7 @@
 
 >### **Preview of Dfuse WebSocket in Firecamp**
 
-![Contentful queries list and debugging](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/master/directory/contentful/WebSocket.gif)
+![Dfuse Websockets demo](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/WebSocket.gif)
 
 
 #### 3) WebSocket
