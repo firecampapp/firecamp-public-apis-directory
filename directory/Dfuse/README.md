@@ -1,4 +1,10 @@
 # **Dfuse**
+Dfuse, the blockchain API company, helps developers build performant applications by organizing the world's decentralized data.
+Powered by its low-latency architecture, its robust APIs make it possible to stream real-time state updates, conduct lightning-fast searches and provide irreversible transaction guarantees all for the first time using a simple API call. The company's flagship products, dfuse Stream, dfuse Lifecycle, dfuse Search and dfuse On Demand Networks, are available today and offer a suite of powerful features that make it easy for developers to customize and deliver first-rate user experiences.
+
+The future of the Web is being built right now by blockchain pioneers who are revolutionizing the way companies, organizations and societies form, operate and interact. Permissionless innovation awaits.
+
+
 ------------------
 
 #### **Modules-:**
@@ -8,7 +14,7 @@
 ------------------- 
 >### **Preview of Dfuse GraphQL query collection in Firecamp**
 
-![Dfuse queries list and debugging](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/GraphQL.gif)
+![Dfuse queries list and debugging](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/master/directory/Dfuse/GraphQL.gif)
 
 
 #### 1)GraphQL
@@ -33,7 +39,7 @@
 
 >### **Preview of Dfuse HTTP in Firecamp**
 
-![Dfuse Rest HTTP requests](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/HTTP.gif)
+![Dfuse Rest HTTP requests](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/master/directory/Dfuse/HTTP.gif)
 
 
 #### 2)Rest API
@@ -80,7 +86,7 @@
 
 >### **Preview of Dfuse WebSocket in Firecamp**
 
-![Dfuse Websockets demo](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/add-dfuse-content/directory/Dfuse/WebSocket.gif)
+![Dfuse Websockets demo](https://raw.githubusercontent.com/shrey1608/firecamp-public-apis-directory/master/directory/Dfuse/WebSocket.gif)
 
 
 #### 3) WebSocket
