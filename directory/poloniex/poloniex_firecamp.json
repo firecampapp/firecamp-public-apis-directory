@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "__export_time": 1588937113145,
+    "__export_app": "firecamp_v1.2.5",
+    "__export_version": 1
+  },
+  "project": {
+    "name": "poloniex"
+  },
+  "environment_snippets": [
+    {
+      "name": "Production",
+      "is_reserved": false
+    },
+    {
+      "name": "Staging",
+      "is_reserved": false
+    },
+    {
+      "name": "Development",
+      "is_reserved": true
+    }
+  ],
+  "modules": [
+    {
+      "name": "WebSocket",
+      "requests": [
+        {
+          "name": "Websocket",
+          "url": "wss://api2.poloniex.com",
+          "type": "websocket",
+          "messages": [
+            {
+              "name": "Subscribing and Unsubscribing",
+              "bodies": [
+                {
+                  "title": "03/05/2020, 16:08:53",
+                  "body": "{\"command\": \"subscribe\", \"channel\": 1000, \"sign\": \"e832d65f...8a522df8\", \"key\": \"7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J\", \"payload\": \"nonce=154264078495300\"}"
+                }
+              ]
+            },
+            {
+              "name": "Ticker Data",
+              "bodies": [
+                {
+                  "title": "03/05/2020, 16:11:31",
+                  "body": "{\"command\": \"subscribe\", \"channel\": 1002}"
+                }
+              ]
+            },
+            {
+              "name": "Price Aggregated Book",
+              "bodies": [
+                {
+                  "title": "03/05/2020, 16:12:32",
+                  "body": "{\"command\": \"subscribe\", \"channel\": \"BTC_ETH\"}"
+                }
+              ]
+            },
+            {
+              "name": "24 Hour Exchange Volume",
+              "bodies": [
+                {
+                  "title": "03/05/2020, 16:11:56",
+                  "body": "{\"command\": \"subscribe\", \"channel\": 1003}"
+                }
+              ]
+            },
+            {
+              "name": "Account Notifications",
+              "bodies": [
+                {
+                  "title": "03/05/2020, 16:09:15",
+                  "body": "{\"command\": \"subscribe\", \"channel\": 1000, \"sign\": \"e832d65f...8a522df8\", \"key\": \"7BCLAZQZ-HKLK9K6U-3MP1RNV9-2LS1L33J\", \"payload\": \"nonce=154264078495300\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HTTP",
+      "requests": [
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnTicker",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnTicker",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnTicker",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=return24hVolume",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "return24hVolume",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "return24hVolume",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnOrderBook&currencyPair=BTC_ETH&depth=10",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnOrderBook",
+                "disable": false
+              },
+              {
+                "key": "currencyPair",
+                "value": "BTC_ETH",
+                "disable": false
+              },
+              {
+                "key": "depth",
+                "value": "10",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnOrderBook",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnTradeHistory&currencyPair=BTC_ETH",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnTradeHistory",
+                "disable": false
+              },
+              {
+                "key": "currencyPair",
+                "value": "BTC_ETH",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnTradeHistory",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnChartData&currencyPair=BTC_XMR&start=1546300800&end=1546646400&period=14400",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnChartData",
+                "disable": false
+              },
+              {
+                "key": "currencyPair",
+                "value": "BTC_XMR",
+                "disable": false
+              },
+              {
+                "key": "start",
+                "value": "1546300800",
+                "disable": false
+              },
+              {
+                "key": "end",
+                "value": "1546646400",
+                "disable": false
+              },
+              {
+                "key": "period",
+                "value": "14400",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnChartData",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnCurrencies",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnCurrencies",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnCurrencies",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": {
+            "host": "poloniex.com",
+            "hostname": "poloniex.com",
+            "href": "https://poloniex.com/public?command=returnLoanOrders&currency=BTC",
+            "origin": "https://poloniex.com",
+            "pathname": "/public",
+            "protocol": "https:",
+            "query_params": [
+              {
+                "key": "command",
+                "value": "returnLoanOrders",
+                "disable": false
+              },
+              {
+                "key": "currency",
+                "value": "BTC",
+                "disable": false
+              }
+            ],
+            "slashes": true
+          },
+          "active_body": "Default",
+          "active_auth": "no_auth",
+          "config": {
+            "ignore_response_content_length": false,
+            "disable_ssl_validation": false
+          },
+          "name": "returnLoanOrders",
+          "type": "api",
+          "bodies": [
+            {
+              "is_default": true,
+              "name": "Default",
+              "active_type": "noBody",
+              "body_types": {
+                "application/graphql": {
+                  "variables": "{}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "name": "README",
+      "data": "## **Poloniex**\n\n------------------\n\n#### **HTTP**\n- returnTicker ---> Retrieves summary information for each currency pair listed on the exchange\n- return24hVolume ---> Returns the 24-hour volume for all markets as well as totals for primary currencies.\n- returnOrderBook ---> Returns the order book for a given market, as well as a sequence number used by websockets for synchronization of book updates and an indicator specifying whether the market is frozen. You may set currencyPair to \"all\" to get the order books of all markets. \n- returnTradeHistory ---> Returns the past 200 trades for a given market, or up to 1,000 trades between a range specified in UNIX timestamps by the \"start\" and \"end\" GET parameters.\n- returnChartData ---> Returns candlestick chart data. Required GET parameters are \"currencyPair\", \"period\" (candlestick period in seconds; valid values are 300, 900, 1800, 7200, 14400, and 86400), \"start\", and \"end\". \"Start\" and \"end\" are given in UNIX timestamp format and used to specify the date range for the data returned.\n- returnCurrencies ---> Returns information about currencies.\n- returnLoanOrders ---> Returns the list of loan offers and demands for a given currency, specified by the \"currency\" GET parameter.\n \n\n------------------\n\n#### **WebSocket**\n- Subscribing and Unsubscribing ---> To receive updates from a channel you must subscribe to it. To subscribe to a public channel (all except the account notifications channel), determine its channel ID (provided with the description of each channel, and summarized here), send a JSON message\n- Account Notifications ---> Notifications provided by the account to the user.\n- Ticker Data ---> Subscribe to ticker updates for all currency pairs.\n- 24 Hour Exchange Volume --->  Subscribe to 24 hour exchange volume statistics. Updates are sent every 20 seconds.\n- Price Aggregated Book ---> Subscribe to price aggregated depth of book by currency pair\n\n------------------ ",
+      "type": "md"
+    }
+  ]
+}
