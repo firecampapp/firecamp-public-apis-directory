@@ -39,6 +39,6 @@ Check out the [API-ENDPONIT](https://poloniex.com/public)
 
 ------------------ 
 
-### Import [Firecamp collection](https://raw.githubusercontent.com/shrey/firecamp-public-apis-directory/master/directory/poloniex/poloniex_firecamp.json) of poloniex queries to debug within seconds
+### Import [Firecamp collection](https://raw.githubusercontent.com/shreya-gr/firecamp-public-apis-directory/master/directory/poloniex/poloniex_firecamp.json) of poloniex queries to debug within seconds
 
 Check out to learn [how to import queries](https://github.com/shreya-gr/firecamp-public-apis-directory#how-to-use-collection) collection in Firecamp
